@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTOPIA</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <!--font: Nanum Gothic-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <!--MATERIAL DESIGN-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="./css/main.css">
+
+    <script defer src="./js/main.js"></script>
+</head>
+<body>
+
+    <!--HEADER-->
+    <header>
+        <div class="inner">
+            <a href="./" class="logo">
+                <img src="images/gtopia_logo.png" alt="GTOPIA"/>
+            </a>
+
+            <div class="main-container">
+                <div class="search-container">
+                    <div class="search">
+                        <input type="text"/>
+                        <div class="material-icons">search</div>
+                    </div>
+                </div>
+
+                <ul class="main-menu">
+                    <li class="item">
+                        <div class="item__name">월</div>
+                    </li>
+                    <li class="item">
+                        <div class="item__name">화</div>
+                    </li>
+                    <li class="item">
+                        <div class="item__name">수</div>
+                    </li>
+                    <li class="item">
+                        <div class="item__name">목</div>
+                    </li>
+                    <li class="item">
+                        <div class="item__name">금</div>
+                    </li>
+                    <li class="item">
+                        <div class="item__name">토</div>
+                    </li>
+                    <li class="item">
+                        <div class="item__name">일</div>
+                    </li>
+                </ul>
+            </div>
+
+            <!--login button-->
+            <div class="signin-btn">
+                <div class="btn">로그인</div>
+            </div>
+            <!--login layer-->
+
+            <div class="signin-layer">
+                <div class="btn-close">
+                    <div class="material-icons">close</div>
+                </div>
+                <form action="">
+                    <input type="text" placeholder="아이디를 입력하세요."/>
+                    <input type="password" placeholder="비밀번호를 입력하세요."/>
+                    <input type="submit" value="로그인">
+                </form>
+                <div class="action">
+                    <a href="javascript:void(0)">회원가입</a>
+                    <a href="javascript:void(0)">아이디 찾기</a>
+                    <a href="javascript:void(0)">비밀번호 찾기</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--VISUAL-->
+    <section class="visual">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./images/gtopia_visual_1.png" alt="visual_1"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/gtopia_visual_2.png" alt="visual_2"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/gtopia_visual_3.png" alt="visual_3"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/gtopia_visual_4.png" alt="visual_4"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/gtopia_visual_5.png" alt="visual_5"/>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-prev">
+                <div class="material-icons">arrow_back</div>
+            </div>
+            <div class="swiper-next">
+                <div class="material-icons">arrow_forward</div>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+</html>
