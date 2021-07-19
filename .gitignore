@@ -2,6 +2,8 @@
 .cache/
 dist/
 node_modules/
+main.css
+main.css.map
 myhomepage.iml
 package.json
 package-lock.json
