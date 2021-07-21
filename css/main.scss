@@ -1,3 +1,22 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+$theme-colors: (
+        "primary":    $primary,
+        "secondary":  $secondary,
+        "success":    $success,
+        "info":       $info,
+        "warning":    $warning,
+        "danger":     $danger,
+        "light":      $light,
+        "dark":       $dark
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import '../node_modules/swiper/swiper-bundle.css';
+//
+
 $mainColor: #69B0DA;
 
 @mixin center {
@@ -7,17 +26,14 @@ $mainColor: #69B0DA;
 }
 
 body {
-    color: #333;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.4;
+    //color: #333;
+    //font-size: 20px;
+    //font-weight: 500;
+    //line-height: 1.4;
     font-family: 'Nanum Gothic', sans-serif;
 }
 img {
     display: block;
-}
-a {
-    text-decoration: none;
 }
 .inner {
     width: 80%;
@@ -30,7 +46,7 @@ header {
     width: 100%;
     position: fixed;
     top: 0;
-    z-index: 9;
+    z-index: 5;
     .logo {
         height: 80px;
         position: absolute;
@@ -117,131 +133,74 @@ header {
                 }
             }
         }
-        .signin-btn {
+        .btn {
             position: absolute;
             right: 0;
-            .btn {
-                width: 130px;
-                padding: 8px;
-                background-color: $mainColor;
-                color: #fff;
-                text-align: center;
-                font-size: 18px;
-                border-color: $mainColor;
-                border-radius: 4px;
-                cursor: pointer;
-            }
-        }
-        .signin-layer {
-            width: 310px;
-            height: 160px;
-            position: absolute;
-            top: 5px;
-            right: 0;
-            opacity: 0;
-            flex-direction: column;
-            justify-content: flex-end;
-            border: 1px solid $mainColor;
-            border-radius: 4px;
-            background-color: #fff;
-            .btn-close {
-                display: inline-flex;
-                position: absolute;
-                top: 0;
-                right: 0;
-                cursor: pointer;
-                .material-icons {
-                    color: $mainColor;
-                    font-size: 18px;
-                }
-            }
-            form {
-                flex-direction: column;
-                @include center;
-                input {
-                    width: 95%;
-                    height: 28px;
-                    font-size: 15px;
-                    border: 1px solid #ddd;
-                    border-radius: 4px;
-                    outline: none;
-                    box-sizing: border-box;
-                    margin-bottom: 8px;
-                }
-                [type="submit"] {
-                    background-color: $mainColor;
-                    color: #fff;
-                }
-            }
-            .action {
-                width: 100%;
-                text-align: center;
-                margin-bottom: 5px;
-                a {
-                    font-size: 15px;
-                    color: #555;
-                    padding-right: 7px;
-                    border-right: 1px solid #ddd;
-                    &:last-child {
-                        border-right: none;
-                        padding-right: unset;
-                    }
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-            }
+            //.btn {
+            //    width: 130px;
+            //    padding: 8px;
+            //    background-color: $mainColor;
+            //    color: #fff;
+            //    text-align: center;
+            //    font-size: 18px;
+            //    border-color: $mainColor;
+            //    border-radius: 4px;
+            //    cursor: pointer;
+            //}
         }
     }
 }
 
 /*VISUAL*/
-.visual .swiper-container {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    .swiper-wrapper {
-        display: flex;
-    }
-    .swiper-pagination {
-        /*position: absolute;*/
-        /*bottom: 40px;*/
-        /*right: 0;*/
-        width: 300px;
-        height: 100px;
-        background-color: royalblue;
-        .swiper-pagination-bullet {
-            color: red;
-            background-color: black;
-            /*background-image: url("../images/slide_pager.png");*/
-            width: 12px;
-            height: 12px;
-            margin-right: 6px;
-            outline: none;
+.visual {
+    //width: 1920px;
+    .swiper-container {
+        position: relative;
+        .swiper-wrapper {
+            .swiper-slide {
+                img {
+                    width: 100%;
+                }
+            }
         }
-    }
-    .swiper-prev,
-    .swiper-next {
-        width: 40px;
-        height: 40px;
-        border: 1px solid $mainColor;
-        border-radius: 50%;
-        color: $mainColor;
-        position: absolute;
-        top: 50%;
-        cursor: pointer;
-        @include center;
-        &:hover {
-            background-color: $mainColor;
-            color: #fff;
-            transition: .4s;
+        .swiper-pagination {
+            @include center;
+            .swiper-pagination-bullet {
+                background-color: transparent;
+                background-image: url("../images/slide_pager.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 15px;
+                height: 15px;
+                margin-right: 6px;
+                outline: none;
+            }
         }
-    }
-    .swiper-prev {
-        left: 15px;
-    }
-    .swiper-next {
-        right: 15px;
+        .swiper-prev,
+        .swiper-next {
+            width: 40px;
+            height: 40px;
+            border: 1px solid $mainColor;
+            border-radius: 50%;
+            color: $mainColor;
+            position: absolute;
+            top: 50%;
+            cursor: pointer;
+            z-index: 9;
+            @include center;
+            &:hover {
+                background-color: $mainColor;
+                color: #fff;
+                transition: .4s;
+            }
+        }
+        .swiper-prev {
+            left: 2%;
+        }
+        .swiper-next {
+            right: 2%;
+        }
     }
 }
 

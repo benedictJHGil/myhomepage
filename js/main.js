@@ -1,5 +1,13 @@
+import Modal from "bootstrap/js/dist/modal"
+
+new Modal(document.querySelector('#exampleModal'), {
+    backdrop: "static"
+})
+
+//
+
 import { gsap } from 'gsap'
-import Swiper from 'swiper/bundle'
+import Swiper from 'swiper/swiper-bundle.js'
 
 const searchEl = document.querySelector('.search')
 const searchIndexEl = searchEl.querySelector('input')
@@ -16,25 +24,6 @@ searchIndexEl.addEventListener('focus', function () {
 searchIndexEl.addEventListener('blur', function () {
     searchEl.classList.remove('focused')
     searchIndexEl.setAttribute('placeholder', '')
-})
-
-/*login popup layer*/
-const signInBtnEl = document.querySelector('.signin-btn .btn')
-const signLayerEl = document.querySelector('.signin-layer')
-const signLayerCloseEl = document.querySelector('.btn-close')
-
-signInBtnEl.addEventListener('click', function () {
-    gsap.to(signLayerEl, .4, {
-        display: 'flex',
-        opacity: 1
-    })
-})
-
-signLayerCloseEl.addEventListener('click', function () {
-    gsap.to(signLayerEl, .4, {
-        display: 'none',
-        opacity: 0
-    })
 })
 
 // const effectArr = new Array('fade', 'coverflow', 'flip', 'cube')
@@ -54,11 +43,11 @@ new Swiper('.visual .swiper-container', {
     loop: true,
     pagination: {
         el: '.swiper-pagination',
-        clickable: true,
+        clickable: true
     },
     navigation: {
         prevEl: '.swiper-prev',
-        nextEl: '.swiper-next',
+        nextEl: '.swiper-next'
     }
 })
 
